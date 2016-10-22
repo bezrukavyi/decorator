@@ -4,7 +4,7 @@ class Test
   extend Decoratorium
 
   AddPrefix.new('BEFORE') { 'AFTER' }
-  Dublicate
+  Dublicate.new
   def hello
     'hello'
   end
@@ -15,5 +15,5 @@ class Test
   end
 end
 
-p Test.new.hello # "BEFORE hello AFTER"
+p Test.new.hello # "BEFORE hello hello AFTER"
 p Test.new.bie # "bie bie bie bie"
