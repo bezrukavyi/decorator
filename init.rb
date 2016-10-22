@@ -1,8 +1,4 @@
-Decoratorium
-============
-
-Using
------
+require_relative 'decoratorium'
 
 class Test
   extend Decoratorium
@@ -21,15 +17,3 @@ end
 
 p Test.new.hello # "BEFORE hello AFTER"
 p Test.new.bie # "bie bie bie bie"
-
-
-Create own decorator
---------------------
-
-class Dublicate < Decorator
-  def call(origin, \*args, &block)
-    ......
-    origin.call
-    ......
-  end
-end
